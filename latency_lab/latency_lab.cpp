@@ -53,7 +53,7 @@ double measure_loop(std::uint64_t iterations) {
     volatile std::uint64_t sink = 0;  // Prevents compiler from optimizing loop away.
     auto start = clock::now();
     for (std::uint64_t i = 0; i < iterations; ++i) {
-        // Place optional branch/memory touch here to compare behaviors later.
+        // TODO: Add branching logic here to compare control-flow effects.
         sink += i;
     }
     auto end = clock::now();
